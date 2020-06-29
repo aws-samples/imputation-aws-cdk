@@ -1,0 +1,3 @@
+[submodule "imputationserver-aws"]
+	path = imputationserver-aws
+	url = https://github.com/genepi/imputationserver-aws.git
