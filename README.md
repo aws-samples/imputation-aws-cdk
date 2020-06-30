@@ -14,6 +14,11 @@ You need to have the following things installed on your development machine.
 2. The AWS CDK CLI. Follow the [preqrequisite](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html#getting_started_prerequisites) and [install](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html#getting_started_install) steps.
 3. The AWS Session Manager Plugin for the AWS CLI. [Install instructions.](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html)
 
+If you have never used EMR in your account before, you will need to create the [default EMR roles](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/emr/create-default-roles.html) before proceeding. Just run the following command. 
+```bash
+aws emr create-default-roles
+```
+
 ## Getting Started - Deployment
 
 Clone the repo (and initialize the submodule) and install the node dependencies.
