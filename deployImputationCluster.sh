@@ -3,9 +3,9 @@ npm run build
 cdk bootstrap
 
 ### Prepare bucket with neccesary EMR files
-clusterBucketName="devspacepaulimputationEAST1"
+clusterBucketName="devspacepaulimputationeast10"
 nameTagForCluster="PaulU"
-sed -i s/s3:\/\/.*\//s3:\/\/$clusterBucketName\//g imputationserver-aws/bootstrap.sh
+sed -i 's/s3:\/\/.*\//s3:\/\/'$clusterBucketName'\//g' imputationserver-aws/bootstrap.sh
 aws s3 mb s3://$clusterBucketName
 aws s3 sync imputationserver-aws/ s3://$clusterBucketName/
 cdk deploy --context nameTag=$nameTagForCluster --context clusterBucketName=$clusterBucketName
