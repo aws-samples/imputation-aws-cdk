@@ -3,8 +3,8 @@ npm run build
 cdk bootstrap
 
 ### Prepare bucket with neccesary EMR files
-clusterBucketName="devspacepaulimputationeast10"
-nameTagForCluster="PaulU"
+clusterBucketName="existing-or-newbucket-all-lowercase-nospaces"
+nameTagForCluster="NameTag-For-Cluster-Spaces-And-Caps-Ok"
 sed -i 's/s3:\/\/.*\//s3:\/\/'$clusterBucketName'\//g' imputationserver-aws/bootstrap.sh
 aws s3 mb s3://$clusterBucketName
 aws s3 sync imputationserver-aws/ s3://$clusterBucketName/
