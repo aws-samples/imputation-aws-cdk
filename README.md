@@ -101,3 +101,14 @@ aws emr list-instances --cluster-id $clusterId \
     --instance-fleet-type MASTER \
     --query "Instances[0].Ec2InstanceId" --output text
 ```
+
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## License
+
+This library is licensed under the MIT-0 License. See the LICENSE file.
+
+
