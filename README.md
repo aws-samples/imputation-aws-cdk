@@ -23,8 +23,8 @@ aws emr create-default-roles
 
 Clone the repo (and initialize the submodule) and install the node dependencies.
 ```bash
-git clone --recurse-submodules ssh://GITREPOGOESHERE
-cd GITREPOGOESHERE
+git clone --recurse-submodules https://github.com/aws-samples/imputation-aws-cdk
+cd imputation-aws-cdk
 npm install
 ```
 We need a bucket to hold EMR configuration and logging detail. 
