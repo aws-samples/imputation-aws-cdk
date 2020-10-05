@@ -8,6 +8,7 @@ import { App } from '@aws-cdk/core';
 
 const app = new cdk.App();
 new ImputationAwsCdkStack(app, 'ImputationAwsCdkStack', {
+    description: "Michigan Imputation Server on Amazon EMR (ib-AoSa4lTDq0)",
     nameTag: app.node.tryGetContext('nameTag'),
     clusterType: ImputationClusterConfigType.small,
     clusterBucketName: app.node.tryGetContext('clusterBucketName')
